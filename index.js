@@ -25,22 +25,28 @@ THE SOFTWARE.
 import { Peripheral } from 'raspi-peripheral';
 import { SerialPort } from 'serialport';
 
-export const DEFAULT_PORT = '/dev/ttyAMA0';
+export const PARITY_NONE = 'none';
+export const PARITY_EVEN = 'even';
+export const PARITY_ODD = 'odd';
+export const PARITY_MARK = 'mark';
+export const PARITY_SPACE = 'space';
 
-const portId = Symbol('portId');
+const DEFAULT_PORT = '/dev/ttyAMA0';
+
+const port = Symbol('port');
 const options = Symbol('options');
 const portInstance = Symbol('portInstance');
 const isOpen = Symbol('isOpen');
 
 export class Serial extends Peripheral {
 
-  constructor({ port = DEFAULT_PORT, baudRate = 9600, dataBits = 8, stopBits = 1, parity = 'none' } = {}) {
+  constructor({ portId = DEFAULT_PORT, baudRate = 9600, dataBits = 8, stopBits = 1, parity = PARITY_NONE } = {}) {
     const pins = [];
     if (port === DEFAULT_PORT) {
       pins.push('TXD0', 'RXD0');
     }
     super(pins);
-    this[portId] = port;
+    this[port] = portId;
     this[options] = {
       baudRate,
       dataBits,
@@ -58,7 +64,7 @@ export class Serial extends Peripheral {
       setImmediate(cb);
       return;
     }
-    this[portInstance] = new SerialPort(this[portId], this[options]);
+    this[portInstance] = new SerialPort(this[port], this[options]);
     this[portInstance].on('open', () => {
       this[portInstance].on('data', (data) => {
         this.emit('data', data);
@@ -77,11 +83,11 @@ export class Serial extends Peripheral {
     this[portInstance].close(cb);
   }
 
-  write(data) {
+  write(data, cb) {
     if (!this[isOpen]) {
       throw new Error('Attempted to write to a closed serial port');
     }
-    this[portInstance].write(data);
+    this[portInstance].write(data, cb);
   }
 
 }
