@@ -17,6 +17,7 @@
   },
   "scripts": {
     "build": "gulp",
+    "postinstall": "echo \"Disabling serial port login at boot time, you may be asked for your password\" && sudo env \"PATH=$PATH\" script/enable_serial.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {

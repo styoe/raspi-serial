@@ -34,7 +34,7 @@ const isOpen = Symbol('isOpen');
 
 export class Serial extends Peripheral {
 
-  constructor(port = DEFAULT_PORT, { baudRate = 9600, dataBits = 8, stopBits = 1, parity = 'none' } = {}) {
+  constructor({ port = DEFAULT_PORT, baudRate = 9600, dataBits = 8, stopBits = 1, parity = 'none' } = {}) {
     const pins = [];
     if (port === DEFAULT_PORT) {
       pins.push('TXD0', 'RXD0');
