@@ -129,6 +129,38 @@ _Arguments_:
   </tr>
 </table>
 
+### Instance Properties
+
+#### port
+
+The serial port tied to this instance
+
+_Type_: String
+
+#### baudRate
+
+The baud rate tied to this instance
+
+_Type_: String
+
+#### dataBits
+
+The number of data bits tied to this instance
+
+_Type_: String
+
+#### stopBits
+
+The number of stop bits tied to this instance
+
+_Type_: String
+
+#### parity
+
+The parity tied to this instance
+
+_Type_: String
+
 ### Instance Methods
 
 #### write(data, cb)

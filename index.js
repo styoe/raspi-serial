@@ -53,6 +53,38 @@ export class Serial extends Peripheral {
       stopBits,
       parity
     }
+    Object.defineProperties(this, {
+      port: {
+        get() {
+          return portId
+        },
+        enumerable: true
+      },
+      baudRate: {
+        get() {
+          return baudRate
+        },
+        enumerable: true
+      },
+      dataBits: {
+        get() {
+          return dataBits
+        },
+        enumerable: true
+      },
+      stopBits: {
+        get() {
+          return stopBits
+        },
+        enumerable: true
+      },
+      parity: {
+        get() {
+          return parity
+        },
+        enumerable: true
+      }
+    })
   }
 
   destroy() {
