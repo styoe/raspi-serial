@@ -46,6 +46,10 @@ raspi.init(function() {
     </tr>
   </thead>
   <tr>
+    <td>DEFAULT_PORT</td>
+    <td>The port ID of the default serial port, equals `"/dev/ttyAMA0"`</td>
+  </tr>
+  <tr>
     <td>PARITY_NONE</td>
     <td>Use no parity, one of five possible values for the <code>parity</code> property in the constructor options</td>
   </tr>

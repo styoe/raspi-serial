@@ -31,7 +31,7 @@ export const PARITY_ODD = 'odd';
 export const PARITY_MARK = 'mark';
 export const PARITY_SPACE = 'space';
 
-const DEFAULT_PORT = '/dev/ttyAMA0';
+export const DEFAULT_PORT = '/dev/ttyAMA0';
 
 const port = Symbol('port');
 const options = Symbol('options');
