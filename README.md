@@ -214,6 +214,48 @@ _Arguments_:
 
 _Returns_: None
 
+#### flush(cb)
+
+Flushes the serial port.
+
+_Arguments_:
+
+<table>
+  <thead>
+    <tr>
+      <th>Argument</th>
+      <th>Type</th>
+      <th>Description</th>
+    </tr>
+  </thead>
+  <tr>
+    <td>cb (optional)</td>
+    <td>Function</td>
+    <td>The callback to call once writing is complete</td>
+  </tr>
+  <tr>
+    <td></td>
+    <td colspan="2">
+      <table>
+        <thead>
+          <tr>
+            <th>Argument</th>
+            <th>Type</th>
+            <th>Description</th>
+          </tr>
+        </thead>
+        <tr>
+          <td>err</td>
+          <td>String | null</td>
+          <td>The error, if one occurred, else null</td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+_Returns_: None
+
 ### Events
 
 #### on('data', function(data))

@@ -1,3 +1,7 @@
+## 1.3.0 (2016-3-13)
+
+- Added `flush` method
+
 ## 1.2.0 (2016-3-13)
 
 - Added `DEFAULT_PORT` constant

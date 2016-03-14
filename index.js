@@ -122,4 +122,11 @@ export class Serial extends Peripheral {
     this[portInstance].write(data, cb);
   }
 
+  flush(cb) {
+    if (!this[isOpen]) {
+      throw new Error('Attempted to flush a closed serial port');
+    }
+    this[portInstance].flush(cb);
+  }
+
 }
