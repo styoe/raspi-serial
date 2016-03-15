@@ -27,9 +27,11 @@ var Serial = require('raspi-serial').Serial;
 
 raspi.init(function() {
   var serial = new Serial();
-  serial.write('Hello from raspi-serial');
-  serial.on('data', function(data) {
-    process.stdout.write(data);
+  serial.open(() => {
+    serial.write('Hello from raspi-serial');
+    serial.on('data', function(data) {
+      process.stdout.write(data);
+    });
   });
 });
 ```
