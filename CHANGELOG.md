@@ -1,3 +1,7 @@
+## 1.4.0 (2016-3-20)
+
+- Added alive checks
+
 ## 1.3.1 (2016-3-20)
 
 - Dependency update to fix bug
