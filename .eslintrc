@@ -1,6 +1,7 @@
 {
   "env": {
-    "node": true
+    "node": true,
+    "es6": true
   },
   "parserOptions": {
     "ecmaVersion": 6,
@@ -18,7 +19,6 @@
     "no-constant-condition": 1,
     "no-dupe-keys": 2,
     "no-duplicate-case": 2,
-    "no-empty": 2,
     "no-ex-assign": 2,
     "no-extra-boolean-cast": 1,
     "no-extra-semi": 2,
@@ -27,7 +27,6 @@
     "default-case": 2,
     "guard-for-in": 2,
     "no-floating-decimal": 2,
-    "no-param-reassign": 2,
     "no-self-compare": 2,
     "no-sequences": 2,
     "no-throw-literal": 2,
@@ -52,6 +51,8 @@
     "constructor-super": 2,
     "no-this-before-super": 2,
     "object-shorthand": [2, "always"],
-    "no-loop-func": 0
+    "no-loop-func": 0,
+    "no-param-reassign": 0,
+    "no-empty": 0
   }
 }

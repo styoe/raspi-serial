@@ -84,7 +84,7 @@ export class Serial extends Peripheral {
         },
         enumerable: true
       }
-    })
+    });
   }
 
   destroy() {

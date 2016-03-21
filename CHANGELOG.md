@@ -1,3 +1,8 @@
+## 1.3.1 (2016-3-20)
+
+- Dependency update to fix bug
+- New build system
+
 ## 1.3.0 (2016-3-13)
 
 - Added `flush` method
