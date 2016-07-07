@@ -1,10 +1,10 @@
 {
   "name": "raspi-serial",
-  "version": "1.4.0",
+  "version": "1.5.0",
   "description": "Provides access to the serial port on the Raspberry Pi as part of the Raspi.js library suite",
   "main": "lib/index.js",
   "dependencies": {
-    "raspi-peripheral": "1.5.2",
+    "raspi-peripheral": "^1.6.0",
     "serialport": "^2.0.6"
   },
   "devDependencies": {
